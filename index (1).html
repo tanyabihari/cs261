@@ -1,0 +1,269 @@
+<!--Sources:
+https://javascript.plainenglish.io/create-a-single-page-website-using-node-js-and-express-js-a0b53e396e4f
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="https://TediousTerribleComma.princesstanyapd.repl.co" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+        <a href="https://strangelargedevice.princesstanyapd.repl.co/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PLANTS</a>
+        <a href="https://soupyliquidmonitor.princesstanyapd.repl.co/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#" class="w3-bar-item w3-button">Saved Plants</a>
+            <a href="#" class="w3-bar-item w3-button">Gallery</a>
+            <a href="#" class="w3-bar-item w3-button">FAQs</a>
+        </div>
+        </div>
+      <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search Location.." name="search">
+        <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+      
+    </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="#plants" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PLANTS</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+    </div>
+    <div class="screen" id="screen1">
+	  <!-- HTML for Screen 1 -->
+	  <h1>My Garden</h1>
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+      
+    <!-- The Plant Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="plants">
+            <div class="popup" onclick="myFunction()">Click for updates!
+  <span class="popuptext"id"myPopup"</span>
+</div>
+      <a href="link.html"onclick="return confirm('Here are some new features:(write new features)');">new updates!</a>
+      <!-- link to html -->
+<a href="google.com" URL> 
+<a href="link.html"></a> <!-- Button link -->
+        <h2 class="w3-wide">Plants</h2>
+        <p class="w3-opacity"><i>Plants in your area:</i></p>
+        <div class="w3-row w3-padding-32">
+        <div class="w3-third">
+            <p>Name of plant</p>
+          <a href="link.html"onclick="return confirm('Sure you want to delete?');">Delete</a>
+            <img src="https://cdn.shopify.com/s/files/1/0250/2151/3807/products/001f7bc8cf3723994b263b52aa48b3fc.jpg?v=1595523475" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+          <p class="w3-justify">Information about plants goes here!</p>
+          <div>
+  <span class="star glyphicon glyphicon-star-empty"></span>
+</div>
+
+<br/>
+
+<div>
+  <i class="heart fa fa-heart-o"></i>
+</div>
+        </div>
+        <div class="w3-third">
+            <p>Name of plant</p>
+          <a href="link.html"onclick="return confirm('Sure you want to delete?');">Delete</a>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Leucanthemum_vulgare_%27Filigran%27_Flower_2200px.jpg/1200px-Leucanthemum_vulgare_%27Filigran%27_Flower_2200px.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+          <p class="w3-justify">Information about plants goes here!</p>
+          <div>
+  <span class="star glyphicon glyphicon-star-empty"></span>
+</div>
+
+<br/>
+
+<div>
+  <i class="heart fa fa-heart-o"></i>
+</div>
+        </div>
+        <div class="w3-third">
+            <p>Name of plant</p>
+          <a href="link.html"onclick="return confirm('Sure you want to delete?');">Delete</a>
+            <img src="https://cdn.webshopapp.com/shops/108044/files/356501361/650x750x1/tulipa-bellville.jpg" class="w3-round" alt="Random Name" style="width:60%">
+          <p class="w3-justify">Information about plants goes here!</p>
+          <div>
+  <span class="star glyphicon glyphicon-star-empty"></span>
+</div>
+
+<br/>
+
+<div>
+  <i class="heart fa fa-heart-o"></i>
+</div>
+        </div>
+        </div>
+    </div>
+
+  
+    
+    <!-- End Page Content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </footer>
+
+    <script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('ticketModal');
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+    </script>
+    </body>
+</html>
+      <!DOCTYPE html>
+<html>
+      <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+</body>
+</html>
